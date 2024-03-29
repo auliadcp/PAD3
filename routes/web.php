@@ -33,7 +33,7 @@ Route::get('detailpesanan', function () {
 // LOGIN
 Route::get('login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 
-// USER 
+// USER
 Route::get('setting', [UserController::class, 'index'])->middleware('guest');
 
 // PENSANAN
@@ -49,3 +49,4 @@ Route::get('status', [StatusPesananController::class, 'index'])->middleware('gue
 // PRODUK
 Route::get('produk', [ProdukController::class, 'index'])->middleware('guest');
 Route::get('tambahproduk', [ProdukController::class, 'create'])->middleware('guest');
+
