@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="col">
-        <h2 class="h4 mb-1">List Pesanan Proses</h2>
+        <h2 class="h4 mb-1">List Pesanan Produk</h2>
         <div class="card shadow">
             <div class="card-body">
                 <!-- table -->
@@ -10,7 +10,7 @@
                     <thead class="thead-dark">
                         <tr role="row">
                             <th>NO</th>
-                            <th>Kode</th>
+                            <th>Kode Pesanan</th>
                             <th>Tanggal</th>
                             <th>Nama</th>
                             <th>No. Telp</th>
@@ -23,6 +23,9 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <tr role="group" class="bg-light">
+                            <td colspan="11"><strong>Di Proses</strong></td>
+                        </tr>
                         <tr>
                             <td>3</td>
                             <td>4574</td>
@@ -31,7 +34,7 @@
                             <td>(132) 339-7423</td>
                             <td>P.O. Box 944, 4739 Suspendisse Road</td>
                             <td>$68.79</td>
-                            <td><span class="badge badge-warning">Pending</span></td>
+                            <td><span class="badge badge-danger">Hold</span></td>
                             <td></td>
                             <td>Detail Order</td>
                             <td><button class="btn btn-sm more-horizontal" type="button">
@@ -45,7 +48,7 @@
 
                         </tr>
                         <tr role="group" class="bg-light">
-                            <td colspan="10"><strong>Di Proses</strong></td>
+                            <td colspan="11"><strong>Di Kirim</strong></td>
                         </tr>
                         <tr>
                             <td>2</td>
@@ -55,7 +58,7 @@
                             <td>(791) 898-8806</td>
                             <td>P.O. Box 724, 3385 Vel Ave</td>
                             <td>$37.00</td>
-                            <td><span class="badge badge-success">Success</span></td>
+                            <td><span class="badge badge-warning">Pending</span></td>
                             <td></td>
                             <td>Detail Order</td>
                             <td><button class="btn btn-sm more-horizontal" type="button">
@@ -68,7 +71,7 @@
                             </td>
                         </tr>
                         <tr role="group" class="bg-light">
-                            <td colspan="10"><strong>Di Kirim</strong></td>
+                            <td colspan="11"><strong>Selesai</strong></td>
                         </tr>
                         <tr>
                             <td>1</td>
@@ -78,7 +81,7 @@
                             <td>(266) 991-0479</td>
                             <td>489-624 Quis St.</td>
                             <td>$86.89</td>
-                            <td><span class="badge badge-danger">Hold</span></td>
+                            <td><span class="badge badge-success">Success</span></td>
                             <td>487385-5144</td>
                             <td>Detail Order</td>
                             <td><button class="btn btn-sm more-horizontal" type="button">

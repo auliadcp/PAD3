@@ -1,7 +1,7 @@
 @extends('template.main')
 
 @section('content')
-     <div class="col">
+    <div class="col">
         <h2 class="h4 mb-1">Produk</h2>
         <div class="card shadow">
             <div class="card-body">
@@ -17,7 +17,7 @@
                             <th>Nama</th>
                             <th>Jenis</th>
                             <th>Harga</th>
-                            <th>QrCode</th>
+                            <th>Barcode</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -28,7 +28,7 @@
                             <td>Contoh Sample</td>
                             <td>Kimia</td>
                             <td>Rp50.000</td>
-                            <td>diisi qrcode</td>
+                            <td>barcode</td>
                             <td><button class="btn btn-sm more-horizontal" type="button">
                                     <span class="text-muted sr-only">Action</span>
                                     <a class="btn btn-sm" href="#"><i class="fe fe-edit"
