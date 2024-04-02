@@ -41,22 +41,22 @@ Route::post('signup', [LoginController::class, 'signup'])->middleware('guest');
 Route::get('logout', [LoginController::class, 'logout'])->middleware('auth');
 
 // USER
-Route::get('setting', [UserController::class, 'index'])->middleware('guest');
+Route::get('setting', [UserController::class, 'index'])->middleware('auth');
 
 // PENSANAN
-Route::get('pesanan', [PesananController::class, 'index'])->middleware('guest');
-Route::get('tambahpesanan', [PesananController::class, 'create'])->middleware('guest');
+Route::get('pesanan', [PesananController::class, 'index'])->middleware('auth');
+Route::get('tambahpesanan', [PesananController::class, 'create'])->middleware('auth');
 
 // LIST PESANAN
-Route::get('listpesanan', [ListPesananController::class, 'index'])->middleware('guest');
+Route::get('listpesanan', [ListPesananController::class, 'index'])->middleware('auth');
 
 // STATUS
-Route::get('status', [StatusPesananController::class, 'index'])->middleware('guest');
+Route::get('status', [StatusPesananController::class, 'index'])->middleware('auth');
 
 // PRODUK
-Route::get('produk', [ProdukController::class, 'index'])->middleware('guest');
-Route::get('produk/add', [ProdukController::class, 'create'])->middleware('guest');
-Route::get('produk/show/{id}', [ProdukController::class, 'show'])->middleware('guest');
-Route::get('produk/edit/{id}', [ProdukController::class, 'edit'])->middleware('guest');
-Route::post('produk/update/{id}', [ProdukController::class, 'update'])->middleware('guest');
-Route::delete('produk/delete/{id}', [ProdukController::class, 'destroy'])->middleware('guest');
+Route::get('produk', [ProdukController::class, 'index'])->middleware('auth');
+Route::get('produk/add', [ProdukController::class, 'create'])->middleware('auth');
+Route::get('produk/show/{id}', [ProdukController::class, 'show'])->middleware('auth');
+Route::get('produk/edit/{id}', [ProdukController::class, 'edit'])->middleware('auth');
+Route::post('produk/update/{id}', [ProdukController::class, 'update'])->middleware('auth');
+Route::delete('produk/delete/{id}', [ProdukController::class, 'destroy'])->middleware('auth');
