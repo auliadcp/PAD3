@@ -56,6 +56,12 @@
                     <span class="ml-3 item-text ">Data Produk</span>
                 </a>
             </li>
+            <li class="nav-item  @if (Request::is('jenis_produk')) active @endif ">
+                <a href="{{ url('jenis_produk') }}" class="nav-link @if (Request::is('jenis_produk')) text-primary @endif">
+                    <i class="fe fe-file-text fe-16"></i>
+                    <span class="ml-3 item-text ">Jenis Produk</span>
+                </a>
+            </li>
         </ul>
         <p class=" nav-heading mt-4 mb-1">
             <span>Status</span>

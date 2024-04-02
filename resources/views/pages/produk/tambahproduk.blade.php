@@ -13,10 +13,6 @@
 
                 <div class="row">
                     <div class="col-md-6">
-                        <div>
-                            <label for="kode">ID Produk</label>
-                            <input type="text" id="kode" class="form-control" readonly value="123098">
-                        </div>
                         <div class="form-group mb-3">
                             <label for="example-fileinput">Input Gambar Produk</label>
                             <input type="file" id="example-fileinput" class="form-control-file">
@@ -38,9 +34,9 @@
                             <input type="text" id="simpleinput" class="form-control">
                         </div>
                     </div> <!-- /.col -->
-                    <div class="form-group mb-3">
+                    {{-- <div class="form-group mb-3">
                         <label for="example-static">BARCODE</label>
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="text-right">
                     <a href="#" class="btn mb-2 btn-outline-danger mx-2">Batal</a>

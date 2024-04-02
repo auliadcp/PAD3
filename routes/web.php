@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\JenisProdukController;
 use App\Http\Controllers\ListPesananController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PesananController;
@@ -56,7 +57,17 @@ Route::get('status', [StatusPesananController::class, 'index'])->middleware('aut
 // PRODUK
 Route::get('produk', [ProdukController::class, 'index'])->middleware('auth');
 Route::get('produk/add', [ProdukController::class, 'create'])->middleware('auth');
+Route::post('produk/store', [ProdukController::class, 'store'])->middleware('auth');
 Route::get('produk/show/{id}', [ProdukController::class, 'show'])->middleware('auth');
 Route::get('produk/edit/{id}', [ProdukController::class, 'edit'])->middleware('auth');
 Route::post('produk/update/{id}', [ProdukController::class, 'update'])->middleware('auth');
 Route::delete('produk/delete/{id}', [ProdukController::class, 'destroy'])->middleware('auth');
+
+// PRODUK
+Route::get('jenis_produk', [JenisProdukController::class, 'index'])->middleware('auth');
+Route::get('jenis_produk/add', [JenisProdukController::class, 'create'])->middleware('auth');
+Route::post('jenis_produk/store', [JenisProdukController::class, 'store'])->middleware('auth');
+Route::get('jenis_produk/show/{id}', [JenisProdukController::class, 'show'])->middleware('auth');
+Route::get('jenis_produk/edit/{id}', [JenisProdukController::class, 'edit'])->middleware('auth');
+Route::post('jenis_produk/update/{id}', [JenisProdukController::class, 'update'])->middleware('auth');
+Route::get('jenis_produk/delete/{id}', [JenisProdukController::class, 'destroy'])->middleware('auth');
