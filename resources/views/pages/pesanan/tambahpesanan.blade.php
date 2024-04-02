@@ -65,7 +65,7 @@
                                     <strong class="card-title">Data Pesanan</strong>
                                 </div>
                                 <div class="card-body">
-                                    <h1>ini nanti ada scan qr code </h1>
+                                    <h1>pendataan pesanan produk menggunakan barcode</h1>
                                     {{-- <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group mb-3">

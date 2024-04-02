@@ -86,7 +86,7 @@
                         <div class="col-13">
                             <div class="card shadow">
                                 <div class="card-body">
-                                    <table class="table table-hover" >
+                                    <table class="table table-hover">
                                         <thead class="thead-dark">
                                             <tr>
                                                 <th>Produk</th>
@@ -100,13 +100,15 @@
                                                 <td>Beau Barrera</td>
                                                 <td>x2</td>
                                                 <td>Rp30.000</td>
-                                                <td><span class="badge badge-pill badge-success">Success</span></td>
+                                                <td><span class="badge badge-pill badge-success">Produk Selesai
+                                                        Dibuat</span></td>
                                             </tr>
                                             <tr>
                                                 <td>Beau Barrera</td>
                                                 <td>x4</td>
                                                 <td>Rp50.000</td>
-                                                <td><span class="badge badge-pill badge-warning">Pending</span></td>
+                                                <td><span class="badge badge-pill badge-warning">Produk Sedang
+                                                        Diproses</span></td>
                                             </tr>
                                         </tbody>
                                     </table>
