@@ -6,7 +6,7 @@
         <div class="card shadow">
             <div class="card-body">
                 <div>
-                    <a href="{{ url('tambahproduk') }}" class="btn btn-primary float-right ml-3">Tambah+</a>
+                    <a href="{{ url('produk/add') }}" class="btn btn-primary float-right ml-3">Tambah+</a>
                 </div>
                 <!-- table -->
                 <table class="table table-bordered" id="tableproduk">

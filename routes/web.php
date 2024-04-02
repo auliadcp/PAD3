@@ -32,8 +32,9 @@ Route::get('detailpesanan', function () {
 
 // LOGIN
 Route::get('login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('signin', [LoginController::class, 'authentication'])->middleware('guest');
 
-// USER 
+// USER
 Route::get('setting', [UserController::class, 'index'])->middleware('guest');
 
 // PENSANAN
@@ -48,4 +49,10 @@ Route::get('status', [StatusPesananController::class, 'index'])->middleware('gue
 
 // PRODUK
 Route::get('produk', [ProdukController::class, 'index'])->middleware('guest');
-Route::get('tambahproduk', [ProdukController::class, 'create'])->middleware('guest');
+Route::get('produk/add', [ProdukController::class, 'create'])->middleware('guest');
+Route::get('produk/show/{id}', [ProdukController::class, 'show'])->middleware('guest');
+Route::get('produk/edit/{id}', [ProdukController::class, 'edit'])->middleware('guest');
+Route::post('produk/update/{id}', [ProdukController::class, 'update'])->middleware('guest');
+Route::delete('produk/delete/{id}', [ProdukController::class, 'destroy'])->middleware('guest');
+
+
