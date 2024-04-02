@@ -18,7 +18,7 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                 <a class="dropdown-item" href="{{ url('setting') }}">Settings</a>
-                <a class="dropdown-item" href="{{ url('/') }}">Logout</a>
+                <a class="dropdown-item" href="{{ url('/logout') }}">Logout</a>
             </div>
         </li>
     </ul>

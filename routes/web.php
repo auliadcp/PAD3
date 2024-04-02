@@ -21,7 +21,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('pages.cek.cekpesanan');
-});
+})->middleware('guest');
+Route::get('home', function () {
+    return view('pages.cek.cekpesanan');
+})->middleware('guest');
 Route::get('dashboard', function () {
     return view('pages.dashboard');
 });
@@ -33,6 +36,9 @@ Route::get('detailpesanan', function () {
 // LOGIN
 Route::get('login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('signin', [LoginController::class, 'authentication'])->middleware('guest');
+Route::get('registrasi', [LoginController::class, 'registrasi'])->middleware('guest');
+Route::post('signup', [LoginController::class, 'signup'])->middleware('guest');
+Route::get('logout', [LoginController::class, 'logout'])->middleware('auth');
 
 // USER
 Route::get('setting', [UserController::class, 'index'])->middleware('guest');
@@ -54,5 +60,3 @@ Route::get('produk/show/{id}', [ProdukController::class, 'show'])->middleware('g
 Route::get('produk/edit/{id}', [ProdukController::class, 'edit'])->middleware('guest');
 Route::post('produk/update/{id}', [ProdukController::class, 'update'])->middleware('guest');
 Route::delete('produk/delete/{id}', [ProdukController::class, 'destroy'])->middleware('guest');
-
-

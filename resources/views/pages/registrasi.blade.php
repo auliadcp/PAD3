@@ -3,7 +3,7 @@
 <body class="light ">
     <div class="wrapper vh-100">
 
-      {{-- alert success & error --}}
+        {{-- alert success & error --}}
         @if (session('success'))
             <div class="alert alert-success alert-dismissible fade show" role="alert">
                 <strong>{{ session('success') }}</strong>
@@ -21,7 +21,7 @@
         @endif
 
         <div class="row align-items-center h-100">
-            <form action="{{ url('signin') }}" method="POST" class="col-lg-3 col-md-4 col-10 mx-auto text-center">
+            <form action="{{ url('signup') }}" method="POST" class="col-lg-3 col-md-4 col-10 mx-auto text-center">
                 @csrf
                 <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="./index.html">
                     <svg version="1.1" id="logo" class="navbar-brand-img brand-md"
@@ -34,9 +34,9 @@
                         </g>
                     </svg>
                 </a>
-                <h1 class="h6 mb-3">Welcome Admin!</h1>
+                <h1 class="h6 mb-3">Registrasi!</h1>
                 <div class="form-group">
-                    <label for="inputUser" class="sr-only">Email address</label>
+                    <label for="inputUser" class="sr-only">Email address / Username</label>
                     <input type="username" name="username" id="inputUser" class="form-control form-control-lg"
                         placeholder="Username" required="" autofocus="">
                 </div>
@@ -46,8 +46,8 @@
                         placeholder="Password" required="">
                 </div>
 
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign In</button>
-                {{-- <a href="{{ url('dashboard') }}" class="btn btn-lg btn-primary btn-block">Sign In</a> --}}
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
+                {{-- <a href="{{ url('dashboard') }}" class="btn btn-lg btn-primary btn-block">Sign Up</a> --}}
                 <p class="mt-5 mb-3 ">Maaf, Login Hanya Untuk Admin.</p>
             </form>
         </div>
