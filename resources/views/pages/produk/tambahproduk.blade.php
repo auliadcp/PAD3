@@ -106,9 +106,12 @@
     @endsection
     @section('script')
         <script>
-            $(function() {
-                $('#tableku').DataTable();
-                $('#tableku2').DataTable();
+            $(document).ready(function() {
+                $('#harga').on('input', function() {
+                    if (this.value.length > 6) {
+                        this.value = this.value.slice(0, 6);
+                    }
+                });
             });
         </script>
     @endsection
