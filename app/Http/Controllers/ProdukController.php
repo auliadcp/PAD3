@@ -7,6 +7,11 @@ use App\Models\Produk;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+
+use Milon\Barcode\DNS2D;
+use Dompdf\Dompdf;
+use Dompdf\Options;
+
 class ProdukController extends Controller
 {
     /**
@@ -136,10 +141,37 @@ class ProdukController extends Controller
     {
         $produk = Produk::find($id);
         $file = public_path('gambar_produk/' . $produk->gambar_produk);
+        $file_barcode = public_path('barcode/' . $produk->barcode . '.png');
+        if (file_exists($file_barcode)) {
+            unlink($file_barcode);
+        }
+
         if (file_exists($file)) {
             unlink($file);
         }
         $produk->delete();
         return redirect('/produk')->with(['success' => 'Data Berhasil Dihapus']);
+    }
+    public function printBarcode(String $id)
+    {
+        // Membuat objek barcode
+        $barcode = new DNS2D();
+
+        // Mendapatkan produk berdasarkan ID
+        $produk = Produk::find($id);
+        if (!$produk) {
+            // Handle jika produk tidak ditemukan
+            return response()->json(['message' => 'Produk tidak ditemukan'], 404);
+        }
+
+        // Mendapatkan data barcode dalam format PNG base64
+        $barcodeData = $barcode->getBarcodePNG($produk->barcode, "QRCODE");
+
+        // Simpan gambar barcode sebagai file PNG
+        $fileName = public_path('barcode/' . $produk->barcode . '.png');
+        file_put_contents($fileName, base64_decode($barcodeData));
+
+        // Mengembalikan response untuk mendownload gambar PNG
+        return response()->download($fileName);
     }
 }

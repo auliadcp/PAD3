@@ -28,6 +28,7 @@
                 <table class="table table-bordered" id="tableproduk">
                     <thead class="thead-dark">
                         <tr role="row">
+                            <th>No</th>
                             <th>ID</th>
                             <th>Produk</th>
                             <th>Nama</th>
@@ -40,20 +41,27 @@
                     <tbody>
                         @foreach ($data as $item)
                             <tr>
+                                <td>{{ $loop->iteration }}</td>
                                 <td>{{ $item->id }}</td>
                                 <td>
                                     <img src="{{ asset('gambar_produk/' . $item->gambar_produk) }}" alt="produk1"
-                                        width="50px">
+                                        width="70px">
                                 </td>
                                 <td>{{ $item->nama_produk }}</td>
                                 <td>{{ $item->JenisProduk->jenis_produk }}</td>
                                 <td>Rp.{{ number_format($item->harga, 0, ',', '.') }}</td>
-                                <td class="">
-                                    {!! DNS2D::getBarcodeHTML($item->barcode, 'QRCODE') !!}
+                                <td class="text-center">
+                                    <center>
+                                        {!! DNS2D::getBarcodeHTML($item->barcode, 'QRCODE', 3, 3) !!}
+                                    </center>
                                     <br>
-                                    {!! DNS1D::getBarcodeHTML($item->barcode, 'C39') !!}
+                                    {{-- {!! DNS1D::getBarcodeHTML($item->barcode, 'C39') !!}
+                                    <br> --}}
+                                    <a href="{{ url('download-barcode/' . $item->id) }}" class="btn btn-success btn-sm"
+                                        id="downlaod-barcode">Download QR-Code</a>
                                 </td>
-                                <td><button class="btn btn-sm more-horizontal" type="button">
+                                <td>
+                                    <button class="btn btn-sm more-horizontal" type="button">
                                         <span
                                             class="text-muted
                                         sr-only">Action</span>
@@ -66,8 +74,6 @@
                                 </td>
                             </tr>
                         @endforeach
-
-
                     </tbody>
                 </table>
             </div>

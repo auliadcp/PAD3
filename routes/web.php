@@ -58,10 +58,11 @@ Route::get('status', [StatusPesananController::class, 'index'])->middleware('aut
 Route::get('produk', [ProdukController::class, 'index'])->middleware('auth');
 Route::get('produk/add', [ProdukController::class, 'create'])->middleware('auth');
 Route::post('produk/store', [ProdukController::class, 'store'])->middleware('auth');
-Route::get('produk/show/{id}', [ProdukController::class, 'show'])->middleware('auth');
+// Route::get('produk/show/{id}', [ProdukController::class, 'show'])->middleware('auth');
 Route::get('produk/edit/{id}', [ProdukController::class, 'edit'])->middleware('auth');
 Route::post('produk/update/{id}', [ProdukController::class, 'store'])->middleware('auth');
 Route::get('produk/delete/{id}', [ProdukController::class, 'destroy'])->middleware('auth');
+Route::get('download-barcode/{id}', [ProdukController::class, 'printBarcode'])->middleware('auth');
 
 // PRODUK
 Route::get('jenis_produk', [JenisProdukController::class, 'index'])->middleware('auth');
