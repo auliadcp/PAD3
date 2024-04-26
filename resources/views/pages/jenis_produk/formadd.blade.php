@@ -35,8 +35,9 @@
                             method="post">
                             @csrf
                             <div class="form-group mb-3">
-                                <input type="hidden" name="id" id="id" value="{{ isset($data['id']) ? $data['id'] : '' }}">
-                                <label for="nama_jenis">Nama Produk</label>
+                                <input type="hidden" name="id" id="id"
+                                    value="{{ isset($data['id']) ? $data['id'] : '' }}">
+                                <label for="nama_jenis">Jenis Produk</label>
                                 <input type="text" id="nama_jenis" name="nama_jenis" class="form-control"
                                     value="{{ isset($data['jenis_produk']) ? $data['jenis_produk'] : '' }}" required>
                             </div>

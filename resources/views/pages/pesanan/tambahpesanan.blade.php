@@ -19,7 +19,7 @@
                         <div class="card shadow">
                             <div class="card shadow mb-4">
                                 <div class="card-header">
-                                    <strong class="card-title">Data Customer</strong>
+                                    <strong class="card-title">Tambah Data Customer</strong>
                                 </div>
                                 <div class="card-body">
                                     <div class="row">
@@ -62,11 +62,10 @@
                         <div class="card shadow">
                             <div class="card shadow mb-4">
                                 <div class="card-header">
-                                    <strong class="card-title">Data Pesanan</strong>
+                                    <strong class="card-title">Tambah Data Pesanan</strong>
                                 </div>
                                 <div class="card-body">
-                                    <h1>pendataan pesanan produk menggunakan barcode</h1>
-                                    {{-- <div class="row">
+                                    <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group mb-3">
                                                 <label for="simpleinput">Nama</label>
@@ -83,7 +82,7 @@
                                             <textarea name="alamat" class="form-control" id="alamat" cols="55" rows="10">
                                             </textarea>
                                         </div>
-                                    </div> --}}
+                                    </div>
                                     <div class="text-right">
                                         <a href="#" class="btn mb-2 btn-outline-danger mx-2"><span
                                                 class="fe fe-chevron-left mr-2"></span>Kembali </a>

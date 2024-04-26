@@ -29,9 +29,9 @@
                             <td>4574</td>
                             <td>2019-09-11 10:22:04</td>
                             <td>Kitra Knapp</td>
-                            <td>(132) 339-7423</td>
-                            <td>P.O. Box 944, 4739 Suspendisse Road</td>
-                            <td>$68.79</td>
+                            <td>08808080808</td>
+                            <td>Jl. Kalimantan </td>
+                            <td>Rp. 140.000</td>
                             <td>Detail Order</td>
                             <td><button class="btn btn-sm more-horizontal" type="button">
                                     <span class="text-muted sr-only">Action</span>

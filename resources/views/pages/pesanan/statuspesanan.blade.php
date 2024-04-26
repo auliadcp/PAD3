@@ -16,15 +16,19 @@
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>on hold</td>
+                            <td>produk belum diproses</td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>di proses</td>
+                            <td>produk sedang diproses</td>
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td>di kirim</td>
+                            <td>produk selesai dibuat</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>produk sedang di kirim</td>
                         </tr>
                     </tbody>
                 </table>
